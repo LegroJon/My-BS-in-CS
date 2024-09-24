@@ -2,7 +2,7 @@
  * SE 320 - Software Construction 
  * Author: Jonathan Legro
  * Date: September 21, 2024
- * Homework Assignment: 
+ * Homework: 
  * Description: 
  */
 
