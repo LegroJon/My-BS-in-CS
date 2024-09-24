@@ -13,14 +13,19 @@ import java.util.Random;
  * Creates an array with 100 randomly chosen integers.
  * Prompts the user to enter the index of the array, then displays the corresponding element value. 
  * If the specified index is out of bounds, catch the exception and display the message "Out of Bounds".
+ * 
+ * References: 
+ * https://www.w3schools.com/java/java_switch.asp
+ * https://howtodoinjava.com/java/exception-handling/try-catch-finally/
+ * https://www.w3schools.com/java/java_user_input.asp
  */
 public class HomeworkAssignment1 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please select an option: 1) Sum two integers; 2) Creates an array; 3) Exit");
-
+        System.out.println("Please select an option: 1) Sum two integers; 2) Create a random array; 3) Exit");
+        //Maybe a try-catch block here to handle invalid input
         switch (scanner.nextInt()) {
             case 1:
                 sumOfTwoIntegers();
@@ -41,14 +46,15 @@ public class HomeworkAssignment1 {
 
         while (!validInput) {
             try {
+                //Maybe seperate the inpur into two try-catch blocks
                 System.out.print("Enter the first integer: ");
                 firstInt = Integer.parseInt(scanner.nextLine());
-
+                
                 System.out.print("Enter the second integer: ");
                 secondInt = Integer.parseInt(scanner.nextLine());
 
                 validInput = true;
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
                 System.out.println("Invalid input. Please enter valid integers.");
             }
         }
@@ -60,10 +66,10 @@ public class HomeworkAssignment1 {
 
     public static void createRandomArray() {
         Random random = new Random();
-        int[] array = new int[100];
+        int[] myRandomArray = new int[100];
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(100);
+        for (int i = 0; i < myRandomArray.length; i++) {
+            myRandomArray[i] = random.nextInt(100);
         }
 
         Scanner scanner = new Scanner(System.in);
@@ -71,8 +77,8 @@ public class HomeworkAssignment1 {
 
         try {
             int index = scanner.nextInt();
-            System.out.println("Element at index " + index + ": " + array[index]);
-        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Element at index " + index + ": " + myRandomArray[index]);
+        } catch (Exception e) {
             System.out.println("Out of Bounds");
         } finally {
             scanner.close();
