@@ -12,7 +12,9 @@ that is out of range, the program must report an error with assertion error mess
 "The entered number is out of range".
  * 
  * References:
- * 
+ * https://www.oracle.com/java/technologies/downloads/#jdk23-windows
+ * https://www.geeksforgeeks.org/assertions-in-java/
+ * https://www.programiz.com/java-programming/assertions
  */
 
  import java.util.Scanner;
