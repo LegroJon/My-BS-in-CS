@@ -3,7 +3,7 @@
  * Author: Jonathan Legro
  * Date: October 14, 2024
  * 
- * Homework: HomeworkAssignment2 
+ * Homework: HomeworkAssignment2 #1
  * Revise the GenericStack class to implement it using an array rather than an ArrayList:
  * 
  * Description: 

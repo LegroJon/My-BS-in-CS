@@ -3,9 +3,13 @@
  * Author: Jonathan Legro
  * Date: September 21, 2024
  * 
- * Homework: 
+ * Homework: HomeworkAssignment2 #3
  * 
- * Description: 
+ * Description: Write a Java program that prompts the user to enter a number between 0
+and 10 and displays the entered number. Use an "assert statement" to determine
+whether the user entered a number within the valid range. If the user entered a number
+that is out of range, the program must report an error with assertion error message
+"The entered number is out of range".
  * 
  * References:
  * 

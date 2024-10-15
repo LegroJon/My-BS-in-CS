@@ -3,7 +3,7 @@
  * Author: Jonathan Legro
  * Date: October 14, 2024
  * 
- * Homework: HomeworkAssignment2 
+ * Homework: HomeworkAssignment2 #2
  * Write the following method that returns a new ArrayList.
  * Description: 
  * Method must remove the duplicates when inserted into the list.
@@ -30,11 +30,11 @@ public static void main(String[] args) {
 
 public static <E> ArrayList<E> removeDuplicates(ArrayList<E> list){
     ArrayList<E> newList = new ArrayList<E>();
-    HashSet<E> set = new HashSet<E>();
+    HashSet<E> set = new HashSet<E>(); // Create a HashSet to store the elements
 
     for (E element : list){
         if (set.add(element)){
-            newList.add(element);
+            newList.add(element); // Add the element to the new list if it is not a duplicate
         }
     }
     return newList;
