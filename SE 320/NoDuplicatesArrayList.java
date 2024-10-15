@@ -5,6 +5,7 @@
  * 
  * Homework: HomeworkAssignment2 #2
  * Write the following method that returns a new ArrayList.
+ * 
  * Description: 
  * Method must remove the duplicates when inserted into the list.
  * References:
