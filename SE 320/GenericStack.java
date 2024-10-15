@@ -3,7 +3,8 @@
  * Author: Jonathan Legro
  * Date: October 14, 2024
  * 
- * Homework: Revise the GenericStack class to implement it using an array rather than an ArrayList:
+ * Homework: HomeworkAssignment2 
+ * Revise the GenericStack class to implement it using an array rather than an ArrayList:
  * 
  * Description: 
  * • You must have a constructor to construct a stack with the default initial capacity.
