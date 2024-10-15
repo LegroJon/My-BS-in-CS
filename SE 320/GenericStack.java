@@ -1,7 +1,7 @@
 /*
  * SE 320 - Software Construction 
  * Author: Jonathan Legro
- * Date: September 21, 2024
+ * Date: October 14, 2024
  * 
  * Homework: Revise the GenericStack class to implement it using an array rather than an ArrayList:
  * 
