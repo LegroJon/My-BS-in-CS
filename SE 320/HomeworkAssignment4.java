@@ -4,15 +4,20 @@ import java.util.Random;
 /*
  * SE 320 - Software Construction 
  * Author: Jonathan Legro
- * Date: September 21, 2024
- * Homework Assignment: One
+ * Date: October 24, 2024
+ * Homework Assignment: Four
  * Description: 
- * A Java program that prompts the user to enter two integers and displays their sum. 
- * Uses an exception handling to prompt the user for reading the number again if the input is incorrect.
- * 
- * Creates an array with 100 randomly chosen integers.
- * Prompts the user to enter the index of the array, then displays the corresponding element value. 
- * If the specified index is out of bounds, catch the exception and display the message "Out of Bounds".
+    1. Create two linked hash sets {"George", "Jim", "John", "Blake", "Kevin", "Michael"} 
+    and {"George", "Katie", "Kevin", "Michelle", "Ryan"} and find their union, difference, and intersection. 
+    (You can clone the sets to preserve the original sets from being changed by these set methods.)
+
+    2. Write a program that reads words from a text file and displays all the nonduplicate words in ascending order. 
+    (Use a TreeSet to hold the words)
+
+    3. Answer the following questions:
+        a. Write the code to format number 12345.678 in the United Kingdom locale. Keep two digits after the decimal point.
+        b. Write the code to format number 12345.678 in U.S. currency.
+        c. Write the code to parse '12,345.678' into a number.lay the message "Out of Bounds".
  * 
  * References: 
  * https://www.w3schools.com/java/java_switch.asp
@@ -24,14 +29,17 @@ public class HomeworkAssignment4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Please select an option: 1) Sum two integers; 2) Create a random array; 3) Exit");
+        System.out.println("Please select an option: 1) Create two linked hash sets; 2) Reads words from a text file; 3) Format number 4) Exit");
         //Maybe a try-catch block here to handle invalid input
         switch (scanner.nextInt()) {
             case 1:
-                sumOfTwoIntegers();
+                createHashSet();
                 break;
             case 2:
-                createRandomArray();
+                readFromTextFile();
+                break;
+            case 3:
+                readFromTextFile();
                 break;
             default:
                 break;
@@ -39,49 +47,18 @@ public class HomeworkAssignment4 {
         scanner.close();
     }
 
-    public static void sumOfTwoIntegers() {
-        Scanner scanner = new Scanner(System.in);
-        boolean validInput = false;
-        int firstInt = 0, secondInt = 0;
+    public static void createHashSet() {
+       
 
-        while (!validInput) {
-            try {
-                //Maybe seperate the inpur into two try-catch blocks
-                System.out.print("Enter the first integer: ");
-                firstInt = Integer.parseInt(scanner.nextLine());
-                
-                System.out.print("Enter the second integer: ");
-                secondInt = Integer.parseInt(scanner.nextLine());
-
-                validInput = true;
-            } catch (Exception e) {
-                System.out.println("Invalid input. Please enter valid integers.");
-            }
-        }
-        scanner.close();
-
-        int sum = firstInt + secondInt;
-        System.out.println("The sum of the two integers is: " + sum);
     }
 
-    public static void createRandomArray() {
-        Random random = new Random();
-        int[] myRandomArray = new int[100];
+    public static void readFromTextFile() {
+       
 
-        for (int i = 0; i < myRandomArray.length; i++) {
-            myRandomArray[i] = random.nextInt(100);
-        }
+    }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the index of the array: ");
+    public static void formatNumber(){
 
-        try {
-            int index = scanner.nextInt();
-            System.out.println("Element at index " + index + ": " + myRandomArray[index]);
-        } catch (Exception e) {
-            System.out.println("Out of Bounds");
-        } finally {
-            scanner.close();
-        }
+
     }
 }
