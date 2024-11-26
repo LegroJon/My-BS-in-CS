@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -40,6 +42,8 @@ public class HomeworkAssignment5 {
             case 1:
                 noOfDaysBetween();
                 break;
+            case 2:
+                preCondition();
             default:
                 break;
         }
@@ -59,9 +63,29 @@ public class HomeworkAssignment5 {
             }
         } catch (Exception e) {
             System.out.println("An error occurred. Please try again.");
-        }
-        finally {
+        } finally {
             System.out.println("Leaving program...");
         }
     }
+
+    static void preCondition() {
+        System.out.println("Precondition or requires clause for the method removeDuplicates");
+
+    }
+
+    public static void removeDuplicates(List lst) {
+        if (lst == null || lst.size() == 0)
+            return;
+        List copy = new ArrayList(lst);
+        Iterator elements = copy.iterator();
+        Object pre = elements.next();
+        while (elements.hasNext()) {
+            Object nex = elements.next();
+            if (pre.equals(nex))
+                lst.remove(nex);
+            else
+                pre = nex;
+        }
+    }
+
 }
